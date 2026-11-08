@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Reto Automatizacion Web</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="299cc539e6be6ea120ef7ff3ab352c4f4cebcf043c0c3da125e8228cfe77d7a5.html">Product Purchase On Tricentis Demo Web Shop</a></span>
+                > <span class="truncate-60"><a
+                    href="8fabe245d7d59870f5c2768f638f4b9ffb24e7f8b020b96090ae95695a24dc22.html">Successful product purchase with a credit card </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-11-2026 00:15</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Product Purchase On Tricentis Demo Web Shop </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a registered customer of the Demo Web Shop<br />
+I want to buy a product with a credit card<br />
+So that I can confirm that the purchase flow works correctly
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c9f3f00af47e226fe024234aa33217095f5508a9cefab321c4c2dbb7755b28d2.html">Purchase
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3d74b427273235d0b6d93204f450caa4dbd7f63cf550df8ec55ed8d6a767485c.html">Successful
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Successful product purchase with a credit card
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the registered user is signed in" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli ensure registered user" width="0"/>
+                <img src="b6db260688d826ebf949b7f6b77754be7bfe409e3831b728422743cca9c5eef0.png" title=" Yoli go to login" width="0"/>
+                <img src="b6db260688d826ebf949b7f6b77754be7bfe409e3831b728422743cca9c5eef0.png" title=" yoli clicks on Input pass" width="0"/>
+                <img src="b6db260688d826ebf949b7f6b77754be7bfe409e3831b728422743cca9c5eef0.png" title=" Yoli go to login (completed)" width="0"/>
+                <img src="b6db260688d826ebf949b7f6b77754be7bfe409e3831b728422743cca9c5eef0.png" title=" Yoli log in" width="0"/>
+                <img src="b6db260688d826ebf949b7f6b77754be7bfe409e3831b728422743cca9c5eef0.png" title=" yoli enters 'merrill.nikolaus@reto.com' into Input email" width="0"/>
+                <img src="a66bac031c15a12886c3f4d6f6b8d8dbed07dea82a070877ac0591333e5036cb.png" title=" yoli enters 'merrill.nikolaus@reto.com' into Input email (completed)" width="0"/>
+                <img src="a66bac031c15a12886c3f4d6f6b8d8dbed07dea82a070877ac0591333e5036cb.png" title=" yoli enters 'Test1234!' into Input password" width="0"/>
+                <img src="028ec9edaa216fb47ab51ae09df9a3f6d4a082cc272e7eac799f6251f31edd0a.png" title=" yoli enters 'Test1234!' into Input password (completed)" width="0"/>
+                <img src="028ec9edaa216fb47ab51ae09df9a3f6d4a082cc272e7eac799f6251f31edd0a.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="6bcc6fc848cd724848ea9301dcc26f6ace3f47a6761af283c97ee06dd9a878c1.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="6bcc6fc848cd724848ea9301dcc26f6ace3f47a6761af283c97ee06dd9a878c1.png" title=" Yoli log in (completed)" width="0"/>
+                <img src="6bcc6fc848cd724848ea9301dcc26f6ace3f47a6761af283c97ee06dd9a878c1.png" title=" Given the registered user is signed in (completed)" width="0"/>
+                <img src="a94dcf4d8b7d5227ad19865326c2cc1854c2a76d5a13ae3abf8a026ab7a3b315.png" title=" When navigates to a category and subcategory to a select a product" width="0"/>
+                <img src="a94dcf4d8b7d5227ad19865326c2cc1854c2a76d5a13ae3abf8a026ab7a3b315.png" title=" Yoli select product" width="0"/>
+                <img src="a94dcf4d8b7d5227ad19865326c2cc1854c2a76d5a13ae3abf8a026ab7a3b315.png" title=" yoli clicks on Category" width="0"/>
+                <img src="a94dcf4d8b7d5227ad19865326c2cc1854c2a76d5a13ae3abf8a026ab7a3b315.png" title=" yoli clicks on Subcategory" width="0"/>
+                <img src="ae09445b8db7fe203118952d45de6172ae4dbd5f12a72d5862394f06c3ee1428.png" title=" yoli clicks on Subcategory (completed)" width="0"/>
+                <img src="ae09445b8db7fe203118952d45de6172ae4dbd5f12a72d5862394f06c3ee1428.png" title=" yoli clicks on Add to cart" width="0"/>
+                <img src="52b9b941fb183099fca9af65c42dcd960bdbbafe8226ead2209ffa90e0f28216.png" title=" yoli clicks on Add to cart (completed)" width="0"/>
+                <img src="52b9b941fb183099fca9af65c42dcd960bdbbafe8226ead2209ffa90e0f28216.png" title=" Yoli select product (completed)" width="0"/>
+                <img src="52b9b941fb183099fca9af65c42dcd960bdbbafe8226ead2209ffa90e0f28216.png" title=" When navigates to a category and subcategory to a select a product (completed)" width="0"/>
+                <img src="04606436335c480cc2ce44a7926a340e38f9ae3f23b11e91e634107f484ff699.png" title=" And adds a product to the shopping cart" width="0"/>
+                <img src="04606436335c480cc2ce44a7926a340e38f9ae3f23b11e91e634107f484ff699.png" title=" Yoli add product cart" width="0"/>
+                <img src="04606436335c480cc2ce44a7926a340e38f9ae3f23b11e91e634107f484ff699.png" title=" yoli clicks on HDD" width="0"/>
+                <img src="014b4679c0ec564f7468409213582b86c7203a73ac29bf08d06da0b6ad297a98.png" title=" yoli clicks on HDD (completed)" width="0"/>
+                <img src="014b4679c0ec564f7468409213582b86c7203a73ac29bf08d06da0b6ad297a98.png" title=" yoli clicks on Add to cart" width="0"/>
+                <img src="2cb3a3926243c6b66d18b4e931d4703fcf9fc020b8d040657e634a58c5b2a30b.png" title=" yoli clicks on Add to cart (completed)" width="0"/>
+                <img src="2cb3a3926243c6b66d18b4e931d4703fcf9fc020b8d040657e634a58c5b2a30b.png" title=" Yoli add product cart (completed)" width="0"/>
+                <img src="2cb3a3926243c6b66d18b4e931d4703fcf9fc020b8d040657e634a58c5b2a30b.png" title=" Yoli go to cart" width="0"/>
+                <img src="2cb3a3926243c6b66d18b4e931d4703fcf9fc020b8d040657e634a58c5b2a30b.png" title=" yoli clicks on Button cart" width="0"/>
+                <img src="aa6b0bd4acc313b14e2666442686235590247be8937840cdc48370eec72acb5c.png" title=" yoli clicks on Button cart (completed)" width="0"/>
+                <img src="aa6b0bd4acc313b14e2666442686235590247be8937840cdc48370eec72acb5c.png" title=" yoli clicks on termsofservice" width="0"/>
+                <img src="e8768a3fe50a94aa435236960ac9f304711a8eddc41e2a0160f85381079f2c05.png" title=" yoli clicks on termsofservice (completed)" width="0"/>
+                <img src="e8768a3fe50a94aa435236960ac9f304711a8eddc41e2a0160f85381079f2c05.png" title=" yoli clicks on Checkout" width="0"/>
+                <img src="1a038884748efa46a454f0287979f1441503950f6ae46e96a7014105c5d106bb.png" title=" yoli clicks on Checkout (completed)" width="0"/>
+                <img src="1a038884748efa46a454f0287979f1441503950f6ae46e96a7014105c5d106bb.png" title=" Yoli go to cart (completed)" width="0"/>
+                <img src="1a038884748efa46a454f0287979f1441503950f6ae46e96a7014105c5d106bb.png" title=" And adds a product to the shopping cart (completed)" width="0"/>
+                <img src="c82ba24b32d406245b728198f854d5bde8afbae5e8bd757e2bc927c76732062e.png" title=" And completes the shipping information
+| Country | Company | City | Address | postalCode | Phone |
+| Canada | Canada.com | Alberta | cr 90 # 89 -12 | 00009 | 302120123 |" width="0"/>
+                <img src="c82ba24b32d406245b728198f854d5bde8afbae5e8bd757e2bc927c76732062e.png" title=" Yoli check out form" width="0"/>
+                <img src="c82ba24b32d406245b728198f854d5bde8afbae5e8bd757e2bc927c76732062e.png" title=" yoli selects Canada on label country" width="0"/>
+                <img src="c82ba24b32d406245b728198f854d5bde8afbae5e8bd757e2bc927c76732062e.png" title=" yoli enters 'Canada.com' into Company" width="0"/>
+                <img src="cc2804fd9fe78edc4033a89f04807bacd678dc247dae87a4fa9280aa7ad34642.png" title=" yoli enters 'Canada.com' into Company (completed)" width="0"/>
+                <img src="cc2804fd9fe78edc4033a89f04807bacd678dc247dae87a4fa9280aa7ad34642.png" title=" yoli enters 'Alberta' into City" width="0"/>
+                <img src="5e5299e9048227881a3de062037f1b8a07509eafe4a63048e54a3eb85d546b7b.png" title=" yoli enters 'Alberta' into City (completed)" width="0"/>
+                <img src="5e5299e9048227881a3de062037f1b8a07509eafe4a63048e54a3eb85d546b7b.png" title=" yoli enters 'cr 90 # 89 -12' into Address" width="0"/>
+                <img src="56ba4aa1e552ecb5f1cf430fcf21658c665736dd93160818fd5e32794b4c4321.png" title=" yoli enters 'cr 90 # 89 -12' into Address (completed)" width="0"/>
+                <img src="56ba4aa1e552ecb5f1cf430fcf21658c665736dd93160818fd5e32794b4c4321.png" title=" yoli enters '00009' into Postal code" width="0"/>
+                <img src="6d15b59c3d379fa3287ca063456eb20fb8a4ac7ef982c47662a2794583fd0354.png" title=" yoli enters '00009' into Postal code (completed)" width="0"/>
+                <img src="6d15b59c3d379fa3287ca063456eb20fb8a4ac7ef982c47662a2794583fd0354.png" title=" yoli enters '302120123' into phone" width="0"/>
+                <img src="a9045df0a096dca74b330f0e3f76484b515eb7f44a085e1b2e5841833e386ecc.png" title=" yoli enters '302120123' into phone (completed)" width="0"/>
+                <img src="a9045df0a096dca74b330f0e3f76484b515eb7f44a085e1b2e5841833e386ecc.png" title=" yoli clicks on Continue billing" width="0"/>
+                <img src="5045e7bf3b86d995a76feefe3820dec4de92eeaaffc29e809f996039c6af10a7.png" title=" yoli clicks on Continue billing (completed)" width="0"/>
+                <img src="5045e7bf3b86d995a76feefe3820dec4de92eeaaffc29e809f996039c6af10a7.png" title=" yoli clicks on Continue" width="0"/>
+                <img src="3dbd8408e0ff54e5004ec466945c209cf36f8cd745c5ebb906e4aa7423848b58.png" title=" yoli clicks on Continue (completed)" width="0"/>
+                <img src="3dbd8408e0ff54e5004ec466945c209cf36f8cd745c5ebb906e4aa7423848b58.png" title=" yoli clicks on Continue" width="0"/>
+                <img src="9bd1c3c8caa001586205e79b4e63b35a32bd7db40a19d7304d08836f52fae95e.png" title=" yoli clicks on Continue (completed)" width="0"/>
+                <img src="9bd1c3c8caa001586205e79b4e63b35a32bd7db40a19d7304d08836f52fae95e.png" title=" yoli clicks on Credit card" width="0"/>
+                <img src="8adae2cc64a209c76a60a257645ea24e37155cb691cc9965a2a61a0117993035.png" title=" yoli clicks on Credit card (completed)" width="0"/>
+                <img src="8adae2cc64a209c76a60a257645ea24e37155cb691cc9965a2a61a0117993035.png" title=" yoli clicks on Continue" width="0"/>
+                <img src="84b4d3e34ea9205292c3496defb1024337315ea5b704f0540c765d596970cc74.png" title=" yoli clicks on Continue (completed)" width="0"/>
+                <img src="84b4d3e34ea9205292c3496defb1024337315ea5b704f0540c765d596970cc74.png" title=" Yoli check out form (completed)" width="0"/>
+                <img src="84b4d3e34ea9205292c3496defb1024337315ea5b704f0540c765d596970cc74.png" title=" And completes the shipping information
+| Country | Company | City | Address | postalCode | Phone |
+| Canada | Canada.com | Alberta | cr 90 # 89 -12 | 00009 | 302120123 | (completed)" width="0"/>
+                <img src="b734b76b98c3d9d3e6ba59226bd92f8b3fffcc745b36839317aaf0f90b7a7518.png" title=" And enters the payment information for confirmation order
+| cardType | name | number | expirationMonth | expirationYear | code |
+| Visa | Barbara Gordon | 4485564059489345 | 04 | 2039 | 123 |" width="0"/>
+                <img src="b734b76b98c3d9d3e6ba59226bd92f8b3fffcc745b36839317aaf0f90b7a7518.png" title=" Yoli payment form" width="0"/>
+                <img src="b734b76b98c3d9d3e6ba59226bd92f8b3fffcc745b36839317aaf0f90b7a7518.png" title=" yoli selects Visa on Credit card" width="0"/>
+                <img src="b734b76b98c3d9d3e6ba59226bd92f8b3fffcc745b36839317aaf0f90b7a7518.png" title=" yoli enters 'Barbara Gordon' into Cardholder Name" width="0"/>
+                <img src="ea7369578cb8a4f470893535356fbceb1223a32b35bbd60e2720fa3d498b8b25.png" title=" yoli enters 'Barbara Gordon' into Cardholder Name (completed)" width="0"/>
+                <img src="ea7369578cb8a4f470893535356fbceb1223a32b35bbd60e2720fa3d498b8b25.png" title=" yoli enters '4485564059489345' into Card Number" width="0"/>
+                <img src="f694f43843f331fab539bc2a30fcc66628c64168efc6eb839ce6c776dfa9cfdf.png" title=" yoli enters '4485564059489345' into Card Number (completed)" width="0"/>
+                <img src="f694f43843f331fab539bc2a30fcc66628c64168efc6eb839ce6c776dfa9cfdf.png" title=" yoli selects 04 on Expire Month" width="0"/>
+                <img src="33555b3fed77c4d670dc3827abeb46056633432695de082abaaeb2f88b63e688.png" title=" yoli selects 04 on Expire Month (completed)" width="0"/>
+                <img src="33555b3fed77c4d670dc3827abeb46056633432695de082abaaeb2f88b63e688.png" title=" yoli selects 2039 on Expire Year" width="0"/>
+                <img src="b56e70a1c653302b0f86d8045762ccf6fd00d05e34d3f9ed789f3912ec5b5ee6.png" title=" yoli selects 2039 on Expire Year (completed)" width="0"/>
+                <img src="b56e70a1c653302b0f86d8045762ccf6fd00d05e34d3f9ed789f3912ec5b5ee6.png" title=" yoli enters '123' into Card Code" width="0"/>
+                <img src="18b581cf14c55a560e16d122d6d7ed1411d11d30eba22a9b2eb92ccfb9c765bc.png" title=" yoli enters '123' into Card Code (completed)" width="0"/>
+                <img src="18b581cf14c55a560e16d122d6d7ed1411d11d30eba22a9b2eb92ccfb9c765bc.png" title=" yoli clicks on Continue" width="0"/>
+                <img src="f606ecca57e8230f22f835b8f91d85861d35ec59215ff41082487b082e58f1c9.png" title=" yoli clicks on Continue (completed)" width="0"/>
+                <img src="f606ecca57e8230f22f835b8f91d85861d35ec59215ff41082487b082e58f1c9.png" title=" yoli clicks on Submitting order information" width="0"/>
+                <img src="12cd241e6e6226fe35f394d54ff503625f2ff8ca777bec16f2cfbc64443e99f2.png" title=" yoli clicks on Submitting order information (completed)" width="0"/>
+                <img src="12cd241e6e6226fe35f394d54ff503625f2ff8ca777bec16f2cfbc64443e99f2.png" title=" Yoli payment form (completed)" width="0"/>
+                <img src="12cd241e6e6226fe35f394d54ff503625f2ff8ca777bec16f2cfbc64443e99f2.png" title=" And enters the payment information for confirmation order
+| cardType | name | number | expirationMonth | expirationYear | code |
+| Visa | Barbara Gordon | 4485564059489345 | 04 | 2039 | 123 | (completed)" width="0"/>
+                <img src="85eb6913f5ccd47b455b769a4f5d72049b85e666812d9330fc5410af7c130071.png" title=" Then the user should see the message &quot;Your order has been successfully processed!&quot;" width="0"/>
+                <img src="85eb6913f5ccd47b455b769a4f5d72049b85e666812d9330fc5410af7c130071.png" title=" Then confirmation message should be a string containing 'Your order has been successfully processed!'" width="0"/>
+
+                <img src="85eb6913f5ccd47b455b769a4f5d72049b85e666812d9330fc5410af7c130071.png" title=" Then the user should see the message "Your order has been successfully processed!" (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.24</span>
+</div>
+</body>
+</html>

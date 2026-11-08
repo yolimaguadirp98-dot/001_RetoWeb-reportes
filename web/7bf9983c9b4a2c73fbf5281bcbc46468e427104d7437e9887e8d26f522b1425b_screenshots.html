@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Reto Automatizacion Web</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ac3f19369c366dcee1c5e796abc219952e37d76f508f9e1c83bea3c3af4cc051.html">User Registration On Tricentis Demo Web Shop</a></span>
+                > <span class="truncate-60"><a
+                    href="7bf9983c9b4a2c73fbf5281bcbc46468e427104d7437e9887e8d26f522b1425b.html">Unsuccessful user registration with invalid data </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-11-2026 00:14</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">User Registration On Tricentis Demo Web Shop </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a new customer of the Demo Web Shop<br />
+I want to create an account<br />
+So that I can sign in and purchase products
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="ba3d42a914cf53e225392eca2cb6bd3818439028684b4e21bfdc6ac31caaac60.html">Sign Up
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="77113e61280164ca0650a48b5aa64977e1aeff18f7381d0f28698b0dcc49fb11.html">Unsuccessful
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Unsuccessful user registration with invalid data
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When the user navigates to the registration page<br>And completes the registration form with "&lt;firstName&gt;", "&lt;lastName&gt;", "&lt;email&gt;", "&lt;password&gt;" and "&lt;confirmPassword&gt;"<br>Then the user should see the error message "&lt;errorMessage&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" 1: Unsuccessful user registration with invalid data ({case=Empty first name, firstName=, lastName=Guadir, email=qa@correo.com, password=Test123*, confirmPassword=Test123*, errorMessage=First name is required.})" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test123*&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters '' into Input first name" width="0"/>
+                <img src="8c63ab146eda1e20c37820dc915808bee3ac189203d9d2620e31f5edef5ecbe1.png" title=" yoli enters '' into Input first name (completed)" width="0"/>
+                <img src="8c63ab146eda1e20c37820dc915808bee3ac189203d9d2620e31f5edef5ecbe1.png" title=" yoli enters 'Guadir' into Input last name" width="0"/>
+                <img src="c39cb59ba40883e02a3f301c918d8b1703c7147358f09f667735b5237ab7fb60.png" title=" yoli enters 'Guadir' into Input last name (completed)" width="0"/>
+                <img src="c39cb59ba40883e02a3f301c918d8b1703c7147358f09f667735b5237ab7fb60.png" title=" yoli enters 'qa@correo.com' into Input email" width="0"/>
+                <img src="de1418aaa4c5936983ffac549de3bd6ddc710b72cc4ebae1596db91bc34dd5b2.png" title=" yoli enters 'qa@correo.com' into Input email (completed)" width="0"/>
+                <img src="de1418aaa4c5936983ffac549de3bd6ddc710b72cc4ebae1596db91bc34dd5b2.png" title=" yoli enters 'Test123*' into Input password" width="0"/>
+                <img src="450e4a4ae4160ea9194b1d11f4f5189e389f28e4f1f375559c106a601625d304.png" title=" yoli enters 'Test123*' into Input password (completed)" width="0"/>
+                <img src="450e4a4ae4160ea9194b1d11f4f5189e389f28e4f1f375559c106a601625d304.png" title=" yoli enters 'Test123*' into Input confirm password" width="0"/>
+                <img src="85f96078433703e9151a5519f2680479b84b5dd0caf99d63a8a6c64ee0c67769.png" title=" yoli enters 'Test123*' into Input confirm password (completed)" width="0"/>
+                <img src="85f96078433703e9151a5519f2680479b84b5dd0caf99d63a8a6c64ee0c67769.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="a6d5bd65e288823e60eb642ba52afe840de58aaffd44f803477a4ad976ba3d05.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="a6d5bd65e288823e60eb642ba52afe840de58aaffd44f803477a4ad976ba3d05.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="a6d5bd65e288823e60eb642ba52afe840de58aaffd44f803477a4ad976ba3d05.png" title=" And completes the registration form with &quot;&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test123*&quot; (completed)" width="0"/>
+                <img src="a6d5bd65e288823e60eb642ba52afe840de58aaffd44f803477a4ad976ba3d05.png" title=" Then the user should see the error message &quot;First name is required.&quot;" width="0"/>
+                <img src="a6d5bd65e288823e60eb642ba52afe840de58aaffd44f803477a4ad976ba3d05.png" title=" Then error messages should be a collection containing 'First name is required.'" width="0"/>
+                <img src="90301ee2f5832beb6e4d43b906b156a28181f6bd8ebbcebd8681c4012b5bab0c.png" title=" Then error messages should be a collection containing 'First name is required.' (completed)" width="0"/>
+                <img src="90301ee2f5832beb6e4d43b906b156a28181f6bd8ebbcebd8681c4012b5bab0c.png" title=" Then the user should see the error message &quot;First name is required.&quot; (completed)" width="0"/>
+                <img src="90301ee2f5832beb6e4d43b906b156a28181f6bd8ebbcebd8681c4012b5bab0c.png" title=" 1: Unsuccessful user registration with invalid data ({case=Empty first name, firstName=, lastName=Guadir, email=qa@correo.com, password=Test123*, confirmPassword=Test123*, errorMessage=First name is required.}) (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" 2: Unsuccessful user registration with invalid data ({case=Empty last name, firstName=Yoli, lastName=, email=qa@correo.com, password=Test123*, confirmPassword=Test123*, errorMessage=Last name is required.})" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test123*&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters 'Yoli' into Input first name" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Yoli' into Input first name (completed)" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters '' into Input last name" width="0"/>
+                <img src="20b6dfa07f163b22885694f5ea0de2e647fef4c363470623c2b288f2fe1c9f85.png" title=" yoli enters '' into Input last name (completed)" width="0"/>
+                <img src="20b6dfa07f163b22885694f5ea0de2e647fef4c363470623c2b288f2fe1c9f85.png" title=" yoli enters 'qa@correo.com' into Input email" width="0"/>
+                <img src="a0164f5f0506930c6a412c581fc482fa960b63857897cf07e7ebdef9ab43a689.png" title=" yoli enters 'qa@correo.com' into Input email (completed)" width="0"/>
+                <img src="a0164f5f0506930c6a412c581fc482fa960b63857897cf07e7ebdef9ab43a689.png" title=" yoli enters 'Test123*' into Input password" width="0"/>
+                <img src="56bcb08da0626c674a4f4bacaa490b7e558d7283da3bc7bbb46ca15371be8d90.png" title=" yoli enters 'Test123*' into Input password (completed)" width="0"/>
+                <img src="56bcb08da0626c674a4f4bacaa490b7e558d7283da3bc7bbb46ca15371be8d90.png" title=" yoli enters 'Test123*' into Input confirm password" width="0"/>
+                <img src="1f2b83f66a520117b7c4986260a62a5d1864665acbd81cdf4d1e2d78a2413e09.png" title=" yoli enters 'Test123*' into Input confirm password (completed)" width="0"/>
+                <img src="1f2b83f66a520117b7c4986260a62a5d1864665acbd81cdf4d1e2d78a2413e09.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="72ed318f01319f294527eb1b7097cc70059b472071af96446df3835a8d9be162.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="72ed318f01319f294527eb1b7097cc70059b472071af96446df3835a8d9be162.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="a71637b2d078985ac114af8b39ace0cdafc646d0f30b1aa9d2ac02b75b1ce53e.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test123*&quot; (completed)" width="0"/>
+                <img src="a71637b2d078985ac114af8b39ace0cdafc646d0f30b1aa9d2ac02b75b1ce53e.png" title=" Then the user should see the error message &quot;Last name is required.&quot;" width="0"/>
+                <img src="a71637b2d078985ac114af8b39ace0cdafc646d0f30b1aa9d2ac02b75b1ce53e.png" title=" Then error messages should be a collection containing 'Last name is required.'" width="0"/>
+                <img src="a71637b2d078985ac114af8b39ace0cdafc646d0f30b1aa9d2ac02b75b1ce53e.png" title=" 2: Unsuccessful user registration with invalid data ({case=Empty last name, firstName=Yoli, lastName=, email=qa@correo.com, password=Test123*, confirmPassword=Test123*, errorMessage=Last name is required.}) (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" 3: Unsuccessful user registration with invalid data ({case=Empty email, firstName=Yoli, lastName=Guadir, email=, password=Test123*, confirmPassword=Test123*, errorMessage=Email is required.})" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;&quot;, &quot;Test123*&quot; and &quot;Test123*&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters 'Yoli' into Input first name" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Yoli' into Input first name (completed)" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Guadir' into Input last name" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'Guadir' into Input last name (completed)" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters '' into Input email" width="0"/>
+                <img src="bd141ef738502c911f9d8e38677b0e33f3117c5234c568a8f027c4aba3c91843.png" title=" yoli enters '' into Input email (completed)" width="0"/>
+                <img src="bd141ef738502c911f9d8e38677b0e33f3117c5234c568a8f027c4aba3c91843.png" title=" yoli enters 'Test123*' into Input password" width="0"/>
+                <img src="81c2524c40d5a79b6a3f19f60f323ca487c308d34ed11e117ad6a806792b7adf.png" title=" yoli enters 'Test123*' into Input password (completed)" width="0"/>
+                <img src="81c2524c40d5a79b6a3f19f60f323ca487c308d34ed11e117ad6a806792b7adf.png" title=" yoli enters 'Test123*' into Input confirm password" width="0"/>
+                <img src="c30e1e5aa729b7c26131474e66b79d93bcac132731c0d112833b96448b2012f3.png" title=" yoli enters 'Test123*' into Input confirm password (completed)" width="0"/>
+                <img src="c30e1e5aa729b7c26131474e66b79d93bcac132731c0d112833b96448b2012f3.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="1b25a7336e4e72443056d256f1a3f15c76b7f44d1c95e55eea111c283edb06bc.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="1b25a7336e4e72443056d256f1a3f15c76b7f44d1c95e55eea111c283edb06bc.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="03f9e4fc2d4382d3d4c7aa49e85a784cfd667c8bd61c2ddf456218b3803f0eb8.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;&quot;, &quot;Test123*&quot; and &quot;Test123*&quot; (completed)" width="0"/>
+                <img src="03f9e4fc2d4382d3d4c7aa49e85a784cfd667c8bd61c2ddf456218b3803f0eb8.png" title=" Then the user should see the error message &quot;Email is required.&quot;" width="0"/>
+                <img src="03f9e4fc2d4382d3d4c7aa49e85a784cfd667c8bd61c2ddf456218b3803f0eb8.png" title=" Then error messages should be a collection containing 'Email is required.'" width="0"/>
+                <img src="03f9e4fc2d4382d3d4c7aa49e85a784cfd667c8bd61c2ddf456218b3803f0eb8.png" title=" 3: Unsuccessful user registration with invalid data ({case=Empty email, firstName=Yoli, lastName=Guadir, email=, password=Test123*, confirmPassword=Test123*, errorMessage=Email is required.}) (completed)" width="0"/>
+                <img src="7893ca2eadc4a586d406d680521f7c7287b6997683a593fb2962351d930d7ae2.png" title=" 4: Unsuccessful user registration with invalid data ({case=Invalid email, firstName=Yoli, lastName=Guadir, email=correo-invalido, password=Test123*, confirmPassword=Test123*, errorMessage=Wrong email})" width="0"/>
+                <img src="7893ca2eadc4a586d406d680521f7c7287b6997683a593fb2962351d930d7ae2.png" title=" Given the user is on the home page" width="0"/>
+                <img src="7893ca2eadc4a586d406d680521f7c7287b6997683a593fb2962351d930d7ae2.png" title=" Yoli open web" width="0"/>
+                <img src="7893ca2eadc4a586d406d680521f7c7287b6997683a593fb2962351d930d7ae2.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/ (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;correo-invalido&quot;, &quot;Test123*&quot; and &quot;Test123*&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters 'Yoli' into Input first name" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Yoli' into Input first name (completed)" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Guadir' into Input last name" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'Guadir' into Input last name (completed)" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'correo-invalido' into Input email" width="0"/>
+                <img src="8bcdb2fea55b8471f73eb1af22e40352f5b00cdbc16e7e90d5f2e53df62f9827.png" title=" yoli enters 'correo-invalido' into Input email (completed)" width="0"/>
+                <img src="8bcdb2fea55b8471f73eb1af22e40352f5b00cdbc16e7e90d5f2e53df62f9827.png" title=" yoli enters 'Test123*' into Input password" width="0"/>
+                <img src="29f92996b09bec9bc48af60082ce59af906042d37dc63c2958ffa9eee4681c72.png" title=" yoli enters 'Test123*' into Input password (completed)" width="0"/>
+                <img src="29f92996b09bec9bc48af60082ce59af906042d37dc63c2958ffa9eee4681c72.png" title=" yoli enters 'Test123*' into Input confirm password" width="0"/>
+                <img src="34688b8cf4e8ab13a50fdea734593b554f741ad8080bc8cd3b41e96a51803b8c.png" title=" yoli enters 'Test123*' into Input confirm password (completed)" width="0"/>
+                <img src="34688b8cf4e8ab13a50fdea734593b554f741ad8080bc8cd3b41e96a51803b8c.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="b5691da4717609b67ffbdaa31bbfb4aa816cc4659753020c1eaa23feb7e3c9c3.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="b5691da4717609b67ffbdaa31bbfb4aa816cc4659753020c1eaa23feb7e3c9c3.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="b5691da4717609b67ffbdaa31bbfb4aa816cc4659753020c1eaa23feb7e3c9c3.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;correo-invalido&quot;, &quot;Test123*&quot; and &quot;Test123*&quot; (completed)" width="0"/>
+                <img src="b96426589edf292654622f957d1963becc858080322593088377117d249bdaa7.png" title=" Then the user should see the error message &quot;Wrong email&quot;" width="0"/>
+                <img src="b96426589edf292654622f957d1963becc858080322593088377117d249bdaa7.png" title=" Then error messages should be a collection containing 'Wrong email'" width="0"/>
+                <img src="b96426589edf292654622f957d1963becc858080322593088377117d249bdaa7.png" title=" 4: Unsuccessful user registration with invalid data ({case=Invalid email, firstName=Yoli, lastName=Guadir, email=correo-invalido, password=Test123*, confirmPassword=Test123*, errorMessage=Wrong email}) (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" 5: Unsuccessful user registration with invalid data ({case=Short password, firstName=Yoli, lastName=Guadir, email=qa@correo.com, password=123, confirmPassword=123, errorMessage=The password should have at least 6 characters.})" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;123&quot; and &quot;123&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters 'Yoli' into Input first name" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Yoli' into Input first name (completed)" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Guadir' into Input last name" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'Guadir' into Input last name (completed)" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'qa@correo.com' into Input email" width="0"/>
+                <img src="0c41b3d8d90466496aeb733b1426465b217c9d1ec40a7a5a03a9ccc591df6358.png" title=" yoli enters 'qa@correo.com' into Input email (completed)" width="0"/>
+                <img src="0c41b3d8d90466496aeb733b1426465b217c9d1ec40a7a5a03a9ccc591df6358.png" title=" yoli enters '123' into Input password" width="0"/>
+                <img src="6654893727fef08f6d9caed48062d4f6b31047124ab288947c9f7b4cd8805f84.png" title=" yoli enters '123' into Input password (completed)" width="0"/>
+                <img src="6654893727fef08f6d9caed48062d4f6b31047124ab288947c9f7b4cd8805f84.png" title=" yoli enters '123' into Input confirm password" width="0"/>
+                <img src="c5803abd55909176304700d34e3789b26113bda773348655372bb642322af26b.png" title=" yoli enters '123' into Input confirm password (completed)" width="0"/>
+                <img src="c5803abd55909176304700d34e3789b26113bda773348655372bb642322af26b.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="c9eebe004fcb40b1820b02d7d2122aee20b329b3e84b04402e674788849c2086.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="c9eebe004fcb40b1820b02d7d2122aee20b329b3e84b04402e674788849c2086.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="c9eebe004fcb40b1820b02d7d2122aee20b329b3e84b04402e674788849c2086.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;123&quot; and &quot;123&quot; (completed)" width="0"/>
+                <img src="c9eebe004fcb40b1820b02d7d2122aee20b329b3e84b04402e674788849c2086.png" title=" Then the user should see the error message &quot;The password should have at least 6 characters.&quot;" width="0"/>
+                <img src="c9eebe004fcb40b1820b02d7d2122aee20b329b3e84b04402e674788849c2086.png" title=" Then error messages should be a collection containing 'The password should have at least 6 characters.'" width="0"/>
+                <img src="751ae58417514b508ce45c945d0c836c520fb73a9be05321863296e72ba35365.png" title=" Then error messages should be a collection containing 'The password should have at least 6 characters.' (completed)" width="0"/>
+                <img src="751ae58417514b508ce45c945d0c836c520fb73a9be05321863296e72ba35365.png" title=" Then the user should see the error message &quot;The password should have at least 6 characters.&quot; (completed)" width="0"/>
+                <img src="751ae58417514b508ce45c945d0c836c520fb73a9be05321863296e72ba35365.png" title=" 5: Unsuccessful user registration with invalid data ({case=Short password, firstName=Yoli, lastName=Guadir, email=qa@correo.com, password=123, confirmPassword=123, errorMessage=The password should have at least 6 characters.}) (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" 6: Unsuccessful user registration with invalid data ({case=Passwords do not match, firstName=Yoli, lastName=Guadir, email=qa@correo.com, password=Test123*, confirmPassword=Test999*, errorMessage=The password and confirmation password do not match.})" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli opens the browser at https://demowebshop.tricentis.com/" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli open web (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Given the user is on the home page (completed)" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" When the user navigates to the registration page" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" Yoli go to register" width="0"/>
+                <img src="5c3b5a6d6fe718af20809ff6d9bb1de9d8f417d8abb2593996484c12f4f9c3eb.png" title=" yoli clicks on Button login" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Button login (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli go to register (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" When the user navigates to the registration page (completed)" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test999*&quot;" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" Yoli sign up" width="0"/>
+                <img src="6d43c67244c14ea6b6e8d4ac751dd7460beef7d48afb9c24c34f8777d0686871.png" title=" yoli clicks on Gender Male" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli clicks on Gender Male (completed)" width="0"/>
+                <img src="4533e0ce92579d5b04018eb6a0c6dac97c415f0c3666c924bb09d350ec9606d7.png" title=" yoli enters 'Yoli' into Input first name" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Yoli' into Input first name (completed)" width="0"/>
+                <img src="9c49c4acdc03e54b4da758ba86138ca82e8f535026ea9c0aa13b33772319145f.png" title=" yoli enters 'Guadir' into Input last name" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'Guadir' into Input last name (completed)" width="0"/>
+                <img src="d930819288bfc1d0df157a69116363c0214253cf5252515e7eca7cfac33e346c.png" title=" yoli enters 'qa@correo.com' into Input email" width="0"/>
+                <img src="0c41b3d8d90466496aeb733b1426465b217c9d1ec40a7a5a03a9ccc591df6358.png" title=" yoli enters 'qa@correo.com' into Input email (completed)" width="0"/>
+                <img src="0c41b3d8d90466496aeb733b1426465b217c9d1ec40a7a5a03a9ccc591df6358.png" title=" yoli enters 'Test123*' into Input password" width="0"/>
+                <img src="1acabdfd9286ad67a0b43c9ba025e11fa9d62e0abfd5a9ff46a6a371b1dbc4e5.png" title=" yoli enters 'Test123*' into Input password (completed)" width="0"/>
+                <img src="1acabdfd9286ad67a0b43c9ba025e11fa9d62e0abfd5a9ff46a6a371b1dbc4e5.png" title=" yoli enters 'Test999*' into Input confirm password" width="0"/>
+                <img src="acac31000424b68ce798ee8ec7e1b1b8664aa64996dcbf6d3d2ac813f38ea208.png" title=" yoli enters 'Test999*' into Input confirm password (completed)" width="0"/>
+                <img src="acac31000424b68ce798ee8ec7e1b1b8664aa64996dcbf6d3d2ac813f38ea208.png" title=" yoli clicks on Input register" width="0"/>
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" yoli clicks on Input register (completed)" width="0"/>
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" Yoli sign up (completed)" width="0"/>
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" And completes the registration form with &quot;Yoli&quot;, &quot;Guadir&quot;, &quot;qa@correo.com&quot;, &quot;Test123*&quot; and &quot;Test999*&quot; (completed)" width="0"/>
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" Then the user should see the error message &quot;The password and confirmation password do not match.&quot;" width="0"/>
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" Then error messages should be a collection containing 'The password and confirmation password do not match.'" width="0"/>
+
+                <img src="3e2fe46c1eadf7c73de00024781a3a04c7e7b92c0e831787fc37442a90aaa48b.png" title=" 6: Unsuccessful user registration with invalid data ({case=Passwords do not match, firstName=Yoli, lastName=Guadir, email=qa@correo.com, password=Test123*, confirmPassword=Test999*, errorMessage=The password and confirmation password do not match.}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.24</span>
+</div>
+</body>
+</html>
